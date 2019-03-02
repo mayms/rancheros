@@ -1,11 +1,11 @@
-#Install
+# Install
 ```bash
 sudo ros install -c https://raw.githubusercontent.com/mayms/rancheros/master/cloud-config.yml -d /dev/sda
 ```
 
-#Add host-only nic
-##On host
-'''
+# Add host-only nic
+## On host
+```
 ipconfig
 
 Windows-IP-Konfiguration
@@ -21,10 +21,10 @@ Ethernet-Adapter VirtualBox Host-Only Network #3:
   Standardgateway . . . . . . . . . :
 
 ...
-'''
-##On rancher
-'''
-sudo ros config set rancher.network.interfaces.eth1.address "172.19.8.101/24"
+```
+## On rancher
+```
+sudo ros config set rancher.network.interfaces.eth1.address "192.168.56.10/24"
 sudo ros config set rancher.network.interfaces.eth1.dhcp false
 sudo system-docker restart network
-'''
+```
