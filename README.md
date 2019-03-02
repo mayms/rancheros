@@ -28,3 +28,14 @@ sudo ros config set rancher.network.interfaces.eth1.address "192.168.56.10/24"
 sudo ros config set rancher.network.interfaces.eth1.dhcp false
 sudo system-docker restart network
 ```
+
+# ssh to rancher
+## with port forwarding in vbox
+```
+ssh rancher@localhost -p 2222
+```
+
+## after host-only nic is added
+```
+ssh rancher@192.168.56.10
+```
