@@ -42,3 +42,9 @@ ssh rancher@localhost -p 2222
 ```
 ssh rancher@192.168.56.10
 ```
+
+# Configure remote docker daemon on host
+Add to .profile
+```
+export DOCKER_HOST=tcp://192.168.56.10:2375
+```
