@@ -24,8 +24,11 @@ Ethernet-Adapter VirtualBox Host-Only Network #3:
 ```
 ## On rancher
 ```
+sudo ros config set rancher.network.interfaces.eth0.dhcp true
+
 sudo ros config set rancher.network.interfaces.eth1.address "192.168.56.10/24"
 sudo ros config set rancher.network.interfaces.eth1.dhcp false
+
 sudo system-docker restart network
 ```
 
