@@ -1,10 +1,16 @@
 #cloud-config
 rancher:
+  services_include:
+    rancher-server: true
   docker:
     extra_args:
       - -H
       - tcp://0.0.0.0:2375
   network:
+    dns:
+      nameservers:
+      - 8.8.8.8
+      - 8.8.4.4
     interfaces:
       eth0:
         dhcp: true
